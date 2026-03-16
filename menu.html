@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>ひだまり弁当</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+<link href="index.html">
+ <link rel="stylesheet" href="style-menu.css">
+ <link rel="icon" href="images/icon-site.svg">
+    </head>
+    <body>
+
+        <div class="pc-layout-container">
+            <div class="pc-side-content pc-left">
+                <img src="images/hidamari-rogo.svg" alt="ひだまりロゴ">
+            </div>
+            <div class="pc-side-content pc-right">
+                <div class="pc-info-box">
+                    <p class="pc-info-title">ひだまり弁当</p>
+                    <p>千葉県〇〇市〇〇町〇〇<br>000-0〒 000 - 0000</p>
+                    <p class="pc-info-tel">Tel 070-0000-0000</p>
+                    <p>営業時間 9:00ー19:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="all-wrapper">
+
+        <header>
+            <div class="inner-wrapper header-flex">
+                <div class="rogo-header">
+                    <img src="images/hidamari-rogo.svg" alt="ひだまりロゴ" width="120" height="auto">
+                </div>
+                
+                <div class="hamburger">
+                    <div class="menu-wrapper">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        
+            <nav class="menu">
+                <div class="close-button">
+                    <span></span><span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="index.html#about">アバウト</a></li>
+                    <li><a href="menu.html">メニュー</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#" class="next-bt">Webでのご注文</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="menu-wrapper-1">
+            <div class="menu-container">
+                <div class="menu-content">
+                    <img class="menu-top-fv" src="images/hidamari-menu-top.jpg">
+                    <p class="menu-text">素材の味を活かしたやさしい味付けで、<br>
+                        冷めてもおいしく、ほっとする味わいに仕上げました。<br>
+                        お米や調味料も、安心できるものを選んでいます。</p>
+                </div>
+
+                <div class="menu-main">
+                    <div class="menu-title">
+                        <img src="images/mozi-menu.svg"alt="menu" width="130px" height="auto">
+                        <img src="images/hidamari-sen.svg"width="170px" height="auto" alt="線">
+                    </div>
+
+                    <div class="menu-wrapper-2">
+
+                        <div class="menu-box">
+                            <img src="images/menu-1.jpg" alt="menu-1" width="300px" height="auto">
+                            <h3>ぽかぽかの温もりを、今日のお昼に。</h3>
+                            <h1>ひだまり弁当 <span class="menu-sub">850円</span></h1>
+                        </div>
+
+                        <div class="menu-box">
+                            <img src="images/menu-2.jpg" alt="menu-2" width="300px" height="auto">
+                            <h3>季節の恵みを、ひと箱にぎゅっと。</h3>
+                            <h1>四季の彩り弁当<span class="menu-sub">980円</span></h1>
+                        </div>
+
+                        <div class="menu-box">
+                            <img src="images/menu-3.jpg" alt="menu-3" width="300px" height="auto">
+                            <h3>ひとくちで、心ほどけるやさしさを。</h3>
+                            <h1>やすらぎ弁当<span class="menu-sub">780円</span></h1>
+                        </div>
+
+                        <div class="menu-box">
+                            <img src="images/menu-4.jpg" alt="menu-4" width="300px" height="auto">
+                            <h3>懐かしい味、あの日のぬくもり。</h3>
+                            <h1>おふくろ弁当 <span class="menu-sub">880円</span></h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-container">
+                    <img  class="icon-footer" src="images/hidamari-rogo.svg"alt="ひだまりロゴ" width="120" height="auto">
+                </div>
+
+                <div class="footer-bt-wrapper">
+                    <ul>
+                        <li class="footer-bt"><a href="#" >Webでのご注文</a></li>
+                        <li class="footer-bt"><a href="#" ><p>お問い合わせ・電話注文はこちらの番号から</p>Tel070-0000-0000</a></li>
+                    </ul>
+                </div>
+
+                </div>
+                <p class="copyright">&copy; 2026 ひだまり弁当</p>
+                <p class="footer-end-text">実在のサイトではありません</p>
+            </div>
+        </div>
+
+                </div>
+        <script>
+// ハンバーガーメニューの開閉
+const hamburger = document.querySelector('.menu-wrapper');
+const menu = document.querySelector('.menu');
+
+// ハンバーガーボタンをクリックした時
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+
+// --- 追加：メニュー内のリンクをクリックした時に閉じる ---
+const menuLinks = document.querySelectorAll('.menu ul li a');
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // メニューを閉じる
+        hamburger.classList.remove('active');
+        menu.classList.remove('active');
+    });
+});
+        </script>
+
+
+    </body>
